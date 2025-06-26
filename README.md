@@ -60,24 +60,3 @@ These modules handle:
 
 ---
 
-## Getting Started
-
-### Prerequisites
-
-- Python (version to be specified)
-- C++ compiler (version to be specified)
-- Additional dependencies will be listed in respective subdirectories.
-
-### Installation
-
-Instructions for installation and setup for both Python and C++ components will be added soon.
-
----
-
-## License
-
-[Specify your project license here.]
-
----
-
-*This README provides a high-level overview. Please check the respective directories (`python/`, `cpp/`) for module-specific documentation and setup instructions as they become available.*
