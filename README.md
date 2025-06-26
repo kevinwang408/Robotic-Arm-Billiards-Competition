@@ -38,11 +38,9 @@ The image processing module is responsible for detecting and locating the billia
     - Loads the input image of the billiard table and billiard balls.
 
 **Input image example**:
+
 <img src="https://github.com/user-attachments/assets/0d9578e9-452b-4030-8918-fcd2dcb5171c" alt="多球員圖" width="400"/>
 
-
-
-![多球員圖](https://github.com/user-attachments/assets/0d9578e9-452b-4030-8918-fcd2dcb5171c)
 
 2. **Image Preprocessing**
     - Adjusts the image size, brightness, and contrast.
