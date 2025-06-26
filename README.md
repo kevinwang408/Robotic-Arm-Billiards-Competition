@@ -11,7 +11,6 @@ This project is a Robotic Arm Billiard Game, designed to simulate and automate b
 - [C++ Modules: Path Planning & Robot Control](#c-modules-path-planning--robot-control)
     - [Path Planning](#path-planning)
     - [Robot Control](#robot-control)
-- [Getting Started](#getting-started)
 - [License](#license)
 
 ---
