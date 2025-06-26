@@ -139,23 +139,10 @@ The robot control module is responsible for executing the selected shot. Its mai
 
 ---
 
-## Getting Started
-
-### Prerequisites
-
-- Python (version to be specified)
-- C++ compiler (version to be specified)
-- Additional dependencies will be listed in respective subdirectories.
-
-### Installation
-
-Instructions for installation and setup for both Python and C++ components will be added soon.
-
----
-
 ## License
 
-[Specify your project license here.]
+This project is licensed under the MIT License – see the [LICENSE](./LICENSE) file for details.
+
 
 ---
 
