@@ -38,7 +38,12 @@ The image processing module is responsible for detecting and locating the billia
 
 **Input image example**:
 
-<img src="https://github.com/user-attachments/assets/0d9578e9-452b-4030-8918-fcd2dcb5171c" alt="多球員圖" width="400"/>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0d9578e9-452b-4030-8918-fcd2dcb5171c" alt="多球員圖" width="400"/>
+</p>
+
+
+
 
 
 2. **Image Preprocessing**
@@ -52,7 +57,10 @@ The image processing module is responsible for detecting and locating the billia
 
 **The result of circle detection**
 
-<img src="https://github.com/user-attachments/assets/ca9772a4-4363-4533-a588-3bfc0e2234a9" alt="多球員圖" width="400"/>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ca9772a4-4363-4533-a588-3bfc0e2234a9" alt="多球員圖" width="400"/>
+</p>
+
 
 
 
@@ -92,7 +100,10 @@ The path planning module determines the optimal way for the robotic arm to play 
 
 **direct path**
 
-<img src="https://github.com/user-attachments/assets/70eed315-2bc7-4194-9a31-7dac8a8b59f0" alt="trajectory of refliction" width="400"/>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/70eed315-2bc7-4194-9a31-7dac8a8b59f0" alt="trajectory of refliction" width="400"/>
+</p>
+
 
 
 5. **Reflection Logic**
@@ -102,11 +113,16 @@ The path planning module determines the optimal way for the robotic arm to play 
 
 **path to mirror point**
 
-<img src="https://github.com/user-attachments/assets/cd39f32f-d8a5-4f39-9aa5-68e61dc22c90" alt="mirror point path" width="400"/>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cd39f32f-d8a5-4f39-9aa5-68e61dc22c90" alt="mirror point path" width="400"/>
+</p>
 
 **all the possible path**
 
-<img src="https://github.com/user-attachments/assets/ae092947-6d6f-417f-909f-4a3d72d85394" alt="trajectory of refliction" width="400"/>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ae092947-6d6f-417f-909f-4a3d72d85394" alt="trajectory of refliction" width="400"/>
+</p>
+
 
 
 
