@@ -9,6 +9,8 @@ This project is a Robotic Arm Billiard Game, designed to simulate and automate b
 - [Overview](#overview)
 - [Python Module: Image Processing](#python-module-image-processing)
 - [C++ Modules: Path Planning & Robot Control](#c-modules-path-planning--robot-control)
+    - [Path Planning](#path-planning)
+    - [Robot Control](#robot-control)
 - [Getting Started](#getting-started)
 - [License](#license)
 
@@ -29,46 +31,60 @@ The Robotic Arm Billiard Game project consists of:
 The image processing module is responsible for detecting and locating the billiard balls and table, and converting their positions into the robot's coordinate system. The workflow consists of the following steps:
 
 1. **Data Loading**
-   - Loads the intrinsic matrix of the camera.
-   - Loads the extrinsic matrix for transforming coordinates from the camera frame to the robot frame.
-   - Loads the input image of the billiard table and billiard balls.
+    - Loads the intrinsic matrix of the camera.
+    - Loads the extrinsic matrix for transforming coordinates from the camera frame to the robot frame.
+    - Loads the input image of the billiard table and billiard balls.
 
 2. **Image Preprocessing**
-   - Adjusts the image size, brightness, and contrast.
-   - These adjustments improve the accuracy of subsequent circle detection.
+    - Adjusts the image size, brightness, and contrast.
+    - These adjustments improve the accuracy of subsequent circle detection.
 
 3. **Circle Detection**
-   - Converts the image to grayscale.
-   - Applies Gaussian blur to reduce noise.
-   - Uses the Hough Circle Transform to detect circles representing billiard balls.
+    - Converts the image to grayscale.
+    - Applies Gaussian blur to reduce noise.
+    - Uses the Hough Circle Transform to detect circles representing billiard balls.
 
 4. **Coordinate Transformation**
-   - Transforms the detected image coordinates of the billiard balls into robot coordinates using the intrinsic and extrinsic matrices.
-   - Stores the transformed coordinates for use in path planning and robot control.
+    - Transforms the detected image coordinates of the billiard balls into robot coordinates using the intrinsic and extrinsic matrices.
+    - Stores the transformed coordinates for use in path planning and robot control.
 
 **Tech Stack:**  
 - Language: Python  
-- Libraries: (To be added, e.g. OpenCV, NumPy, etc.)  
+- Libraries: (To be added, e.g. OpenCV, NumPy, etc.)
 
 ---
 
 ## C++ Modules: Path Planning & Robot Control
 
-These modules handle:
+### Path Planning
 
-- **Path Planning:**  
-  - Calculating collision-free paths for the robotic arm.
-  - Determining the best angles and forces for successful shots.
+The path planning module determines the optimal way for the robotic arm to play the shot, considering the positions of all balls and holes. Its main logic includes:
+
+1. **Primary Conditions Considered**
+    - **Direct Shot:** The cue ball can collide with the target billiard ball, and the target billiard ball can be directly pocketed.
+    - **Reflection Shot:** If the direct shot is blocked, the cue ball may need to reflect off a wall to hit the target billiard ball, and then the target billiard ball can be directly pocketed.
+
+2. **Obstacle Checking**
+    - For both cue ball-to-billiard ball and billiard ball-to-hole paths, the algorithm checks for obstacles by calculating the shortest distance from the path to each other billiard ball.
+    - If this distance is less than twice the radius (2R, where R is the radius of a billiard ball), the path is considered blocked and invalid.
+
+3. **Path Selection**
+    - If there is a valid direct path (no obstacles), the shot is planned accordingly.
+    - If all direct paths are blocked, the module proceeds to evaluate the possibility of a valid reflection shot (details to be added).
+
+*Details for reflection handling will be added soon.*
+
+---
+
+### Robot Control
 
 - **Robot Control:**  
-  - Interfacing with the robotic arm hardware.
-  - Executing planned paths in real-time.
+    - Interfaces with the robotic arm hardware.
+    - Executes the planned trajectories in real-time based on the output from the path planning module.
 
 **Tech Stack:**  
 - Language: C++  
-- Libraries/Dependencies: (To be added, e.g. ROS, Eigen, hardware SDKs, etc.)  
-
-*More details coming soon.*
+- Libraries/Dependencies: (To be added, e.g. ROS, Eigen, hardware SDKs, etc.)
 
 ---
 
