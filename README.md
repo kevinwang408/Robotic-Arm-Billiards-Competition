@@ -37,7 +37,7 @@ The image processing module is responsible for detecting and locating the billia
     - Loads the extrinsic matrix for transforming coordinates from the camera frame to the robot frame.
     - Loads the input image of the billiard table and billiard balls.
 
-**Input image example:
+**Input image example**:
 ![多球員圖](https://github.com/user-attachments/assets/0d9578e9-452b-4030-8918-fcd2dcb5171c)
 
 2. **Image Preprocessing**
@@ -48,6 +48,10 @@ The image processing module is responsible for detecting and locating the billia
     - Converts the image to grayscale.
     - Applies Gaussian blur to reduce noise.
     - Uses the Hough Circle Transform to detect circles representing billiard balls.
+
+**The result of circle detection**
+![多球檢鄵](https://github.com/user-attachments/assets/ca9772a4-4363-4533-a588-3bfc0e2234a9)
+
 
 4. **Coordinate Transformation**
     - Transforms the detected image coordinates of the billiard balls into robot coordinates using the intrinsic and extrinsic matrices.
