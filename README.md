@@ -91,18 +91,25 @@ The path planning module determines the optimal way for the robotic arm to play 
     - If there is a valid direct path (meeting both obstacle and angle criteria), the shot is planned accordingly.
     - If all direct paths are blocked or do not meet the angle requirement, the module proceeds to evaluate the possibility of a valid reflection shot.
 
+**direct path**
+
+<img src="https://github.com/user-attachments/assets/70eed315-2bc7-4194-9a31-7dac8a8b59f0" alt="trajectory of refliction" width="400"/>
+
+
 5. **Reflection Logic**
     - For reflection shots, the system projects the target billiard ball's coordinates across each of the four sides of the billiard table ("mirror" points).
     - For each projected (reflected) point, it checks if the path from the cue ball to the projected billiard ball is clear, and considers angle requirements as above.
     - If such a path exists (i.e., not blocked by other balls and meets the angle requirement), the reflection path is considered valid and can be used for shot planning.
 
 **path to mirror point**
+
 <img src="https://github.com/user-attachments/assets/cd39f32f-d8a5-4f39-9aa5-68e61dc22c90" alt="mirror point path" width="400"/>
 
 **all the possible path**
+
 <img src="https://github.com/user-attachments/assets/ae092947-6d6f-417f-909f-4a3d72d85394" alt="trajectory of refliction" width="400"/>
-![投影示意_3](https://github.com/user-attachments/assets/cd39f32f-d8a5-4f39-9aa5-68e61dc22c90)
-![彈射軌跡](https://github.com/user-attachments/assets/ae092947-6d6f-417f-909f-4a3d72d85394)
+
+
 
 
 
