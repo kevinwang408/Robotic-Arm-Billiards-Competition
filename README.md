@@ -140,7 +140,7 @@ The robot control module is responsible for executing the selected shot. Its mai
 
 ## License
 
-This project is licensed under the MIT License – see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License.
 
 
 ---
