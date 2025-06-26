@@ -94,9 +94,14 @@ The path planning module determines the optimal way for the robotic arm to play 
 
 ### Robot Control
 
-- **Robot Control:**  
-    - Interfaces with the robotic arm hardware.
-    - Executes the planned trajectories in real-time based on the output from the path planning module.
+The robot control module is responsible for executing the selected shot. Its main workflow is:
+
+1. **Hit Point Calculation**
+    - Uses the vector from the cue ball to the collision point on the target billiard ball to determine the precise hit point for the robotic arm.
+
+2. **Arm Manipulation and Execution**
+    - Moves the robotic arm to the assigned position based on the calculated hit point and path planning results.
+    - Executes the shot by striking the cue ball at the correct location and direction.
 
 **Tech Stack:**  
 - Language: C++  
