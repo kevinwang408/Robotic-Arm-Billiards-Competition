@@ -26,7 +26,7 @@ The Robotic Arm Billiard Game project consists of:
 
 ---
 
-![多球員圖](https://github.com/user-attachments/assets/0d9578e9-452b-4030-8918-fcd2dcb5171c)
+
 
 ## Python Module: Image Processing
 
@@ -36,6 +36,9 @@ The image processing module is responsible for detecting and locating the billia
     - Loads the intrinsic matrix of the camera.
     - Loads the extrinsic matrix for transforming coordinates from the camera frame to the robot frame.
     - Loads the input image of the billiard table and billiard balls.
+
+**Input image example:
+![多球員圖](https://github.com/user-attachments/assets/0d9578e9-452b-4030-8918-fcd2dcb5171c)
 
 2. **Image Preprocessing**
     - Adjusts the image size, brightness, and contrast.
