@@ -77,6 +77,11 @@ The path planning module determines the optimal way for the robotic arm to play 
     - For each projected (reflected) point, it checks if the path from the cue ball to the projected billiard ball is clear, using the same obstacle checking logic as above.
     - If such a path exists (i.e., not blocked by other balls), the reflection path is considered valid and can be used for shot planning.
 
+5. **Path Evaluation and Final Selection**
+    - After finding all available valid paths (both direct and reflection), the module calculates the total distance for each path.
+    - The total distance is defined as the sum of the distance between the cue ball and the target billiard ball, plus the distance from the target billiard ball to the target hole.
+    - The path with the shortest total distance is selected as the final execution path for the robotic arm.
+
 *More details on advanced reflection handling will be added soon.*
 
 ---
