@@ -52,7 +52,9 @@ The image processing module is responsible for detecting and locating the billia
     - Uses the Hough Circle Transform to detect circles representing billiard balls.
 
 **The result of circle detection**
-![多球檢鄵](https://github.com/user-attachments/assets/ca9772a4-4363-4533-a588-3bfc0e2234a9)
+
+<img src="https://github.com/user-attachments/assets/ca9772a4-4363-4533-a588-3bfc0e2234a9" alt="多球員圖" width="400"/>
+
 
 
 4. **Coordinate Transformation**
